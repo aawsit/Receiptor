@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Receiptor
@@ -53,6 +54,18 @@ namespace Receiptor
                 ctb_info_srcCode.IsEnabled = false;
                 ck_alt.IsChecked = true;
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Receipt rcpt = new Receipt(ReceiptType.SelectedIndex);
+            rcpt.primary = pullPrimaryAddress();
+        }
+
+        private Address pullPrimaryAddress()
+        {
+            Address add = new Address(ad1_line1.GetValue., ad1_line2.GetValue, ad1_city.GetValue, ad1_state.GetValue, ad1_zip.GetValue, ad1_canadian_bool);
+
         }
     }
 }

@@ -15,17 +15,30 @@ namespace Receiptor
         private static Font CourierBody = new Font("Courier New", 12);
         private static Font LucidaBody = new Font("Lucida Sans", 12);
         private static Font LucidaHeader = new Font("Lucida Sans", 18);
+        private static StringFormat fmt;
 
         public static void PrintReciept(Receipt _rec)
         {
             PrintDialog pd = new PrintDialog();
             PrintDocument doc = new PrintDocument();
-            doc.PrintPage += new PrintPageEventHandler(pd_printPage);
+            doc.PrintPage += (sender, e) => pd_printPage(sender, e, _rec);
         }
 
-        private static void pd_printPage(object sender, PrintPageEventArgs e)
+        private static void pd_printPage(object sender, PrintPageEventArgs e, Receipt _rec)
         {
             Graphics gfx = e.Graphics;
+            fmt = new StringFormat(StringFormatFlags.DirectionVertical);
+            Receipt.validateReceipt(_rec);
+        }
+
+        internal static void PrintStandard(Receipt rec)
+        {
+            Messenger.AlertUser("Standard Receipt is Ready to Print.", "All checks pass, and reciept should print properly", "Info");
+        }
+
+        internal static void PrintBirthday(Receipt rec)
+        {
+            Messenger.AlertUser("Birthday Receipt is Ready to Print.", "All Checks Pass, and receipt should print properly", "Info");
         }
     }
 }
