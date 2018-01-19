@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Receiptor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="650">
     <Grid>
-        
+        <ComboBox x:Name="ReceiptType" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="131"/>
+        <DatePicker HorizontalAlignment="Left" Margin="146,25,0,0" VerticalAlignment="Top" Width="154"/>
+        <CheckBox Content="Different Acknowledgement Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="305,30,0,0"/>
+        <Button Content="Print" HorizontalAlignment="Left" Margin="545,25,0,0" VerticalAlignment="Top" Width="75"/>
+        <GroupBox Header="Primary Address" HorizontalAlignment="Left" Height="235" Margin="15,74,0,0" VerticalAlignment="Top" Width="199">
+            <Grid>
+                <TextBox x:Name="ad1_line1" Height="23" Margin="0,2,0,0" TextWrapping="Wrap" Text="Address 1" VerticalAlignment="Top"/>
+                <TextBox x:Name="ad1_line2" Height="23" Margin="0,27,0,0" TextWrapping="Wrap" Text="Address 2" VerticalAlignment="Top"/>
+                <TextBox x:Name="ad1_city" Height="23" Margin="0,52,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top"/>
+                <TextBox x:Name="ad1_state" Height="23" Margin="0,77,0,0" TextWrapping="Wrap" Text="State/Province" VerticalAlignment="Top"/>
+                <TextBox x:Name="ad1_zip" Height="23" Margin="0,102,0,0" TextWrapping="Wrap" Text="Zip/Postal Code" VerticalAlignment="Top"/>
+                <CheckBox x:Name="ad1_canadian_bool" Content="This is a Canadian address" Margin="0,144,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Alternate Address" HorizontalAlignment="Left" Height="235" Margin="218,74,0,0" VerticalAlignment="Top" Width="199">
+            <Grid>
+                <TextBox x:Name="ad2_line1" Height="23" Margin="0,2,0,0" TextWrapping="Wrap" Text="Address 1" VerticalAlignment="Top"/>
+                <TextBox x:Name="ad2_line2" Height="23" Margin="0,27,0,0" TextWrapping="Wrap" Text="Address 2" VerticalAlignment="Top"/>
+                <TextBox x:Name="ad2_city" Height="23" Margin="0,52,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top"/>
+                <TextBox x:Name="ad2_state" Height="23" Margin="0,77,0,0" TextWrapping="Wrap" Text="State/Province" VerticalAlignment="Top"/>
+                <TextBox x:Name="ad2_zip" Height="23" Margin="0,102,0,0" TextWrapping="Wrap" Text="Zip/Postal Code" VerticalAlignment="Top"/>
+                <CheckBox x:Name="ad2_canadian_bool" Content="This is a Canadian address" Margin="0,144,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="ad1_adline1" Header="Contribution Info" HorizontalAlignment="Left" Height="235" Margin="421,74,0,0" VerticalAlignment="Top" Width="199">
+            <Grid>
+                <TextBox x:Name="ctb_info_amt" Height="23" Margin="0,2,0,0" TextWrapping="Wrap" Text="Contribution Amount" VerticalAlignment="Top"/>
+                <TextBox x:Name="ctb_info_payer" Height="23" Margin="0,27,0,0" TextWrapping="Wrap" Text="Contributer Name" VerticalAlignment="Top"/>
+                <TextBox x:Name="ctb_info_honoree" Height="23" Margin="0,52,0,0" TextWrapping="Wrap" Text="Contribution Honoree" VerticalAlignment="Top"/>
+                <TextBox x:Name="ctb_info_gsn" Height="23" Margin="0,77,0,0" TextWrapping="Wrap" Text="Group Service Number" VerticalAlignment="Top"/>
+                <TextBox x:Name="ctb_info_srcCode" Height="23" Margin="0,102,0,0" TextWrapping="Wrap" Text="Source Code" VerticalAlignment="Top"/>
+                <TextBox x:Name="ctb_info_grpName" Height="23" Margin="0,127,0,0" TextWrapping="Wrap" Text="Group Name" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
