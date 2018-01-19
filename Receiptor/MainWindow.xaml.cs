@@ -60,12 +60,29 @@ namespace Receiptor
         {
             Receipt rcpt = new Receipt(ReceiptType.SelectedIndex);
             rcpt.primary = pullPrimaryAddress();
+            if (ck_alt.IsChecked.Value)
+            {
+                rcpt.alternateAddress = true;
+                rcpt.alternate = pullAlternateAddress();
+            }
+            rcpt.Contrib = pullContribInfo();
+        }
+
+        private Contribution pullContribInfo()
+        {
+            Contribution cont = new Contribution(ctb_info_amt.Text, ctb_info_gsn.Text, ctb)
+        }
+
+        private Address pullAlternateAddress()
+        {
+            Address add = new Address(ad2_line1.Text, ad2_line2.Text, ad2_city.Text, ad2_state.Text, ad2_zip.Text, ad2_canadian_bool.IsChecked.Value);
+            return add;
         }
 
         private Address pullPrimaryAddress()
         {
-            Address add = new Address(ad1_line1.GetValue., ad1_line2.GetValue, ad1_city.GetValue, ad1_state.GetValue, ad1_zip.GetValue, ad1_canadian_bool);
-
+            Address add = new Address(ad1_line1.Text, ad1_line2.Text, ad1_city.Text, ad1_state.Text, ad1_zip.Text, ad1_canadian_bool.IsChecked.Value);
+            return add;
         }
     }
 }
