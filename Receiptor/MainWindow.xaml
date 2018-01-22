@@ -12,7 +12,7 @@
             <ComboBoxItem Content="Birthday Receipt"/>
             <ComboBoxItem Content="Memorial Receipt"/>
         </ComboBox>
-        <DatePicker HorizontalAlignment="Left" Margin="146,25,0,0" VerticalAlignment="Top" Width="154"/>
+        <DatePicker x:Name="rcpt_date" HorizontalAlignment="Left" Margin="146,25,0,0" VerticalAlignment="Top" Width="154"/>
         <CheckBox x:Name="ck_alt" Content="Different Acknowledgement Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="305,30,0,0" Checked="ck_alt_Checked" Unchecked="ck_alt_Unchecked"/>
         <Button Content="Print" HorizontalAlignment="Left" Margin="545,25,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <GroupBox Header="Primary Address" HorizontalAlignment="Left" Height="235" Margin="15,74,0,0" VerticalAlignment="Top" Width="199">

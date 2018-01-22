@@ -110,6 +110,7 @@ namespace Receiptor
             {
                 return;
             }
+            Messenger.AlertUser("Successful Validation, Sending to Printer", "All Validation has passed.", "Info");
             Printality.PrintBirthday(rec);
         }
 
@@ -143,6 +144,7 @@ namespace Receiptor
             {
                 return;
             }
+            Messenger.AlertUser("Validation Successful", "All validations pass. Sending to Printer", "Info");
             Printality.PrintStandard(rec);
         }
 

@@ -21,6 +21,7 @@ namespace Receiptor
         {
             PrintDialog pd = new PrintDialog();
             PrintDocument doc = new PrintDocument();
+            //Messenger.AlertUser("Receipt to Print", _rec.ToString(), "Info");
             doc.PrintPage += (sender, e) => pd_printPage(sender, e, _rec);
         }
 

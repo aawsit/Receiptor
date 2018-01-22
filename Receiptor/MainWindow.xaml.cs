@@ -66,11 +66,13 @@ namespace Receiptor
                 rcpt.alternate = pullAlternateAddress();
             }
             rcpt.Contrib = pullContribInfo();
+            Printality.PrintReciept(rcpt);
         }
 
         private Contribution pullContribInfo()
         {
-            Contribution cont = new Contribution(ctb_info_amt.Text, ctb_info_gsn.Text, ctb)
+            Contribution cont = new Contribution(ctb_info_amt.Text, ctb_info_gsn.Text, ctb_info_grpName.Text, rcpt_date.SelectedDate.Value, ctb_info_payer.Text, ctb_info_honoree.Text, ctb_info_srcCode.Text);
+            return cont;
         }
 
         private Address pullAlternateAddress()
