@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing.Printing;
 
 namespace Receiptor
 {
@@ -52,28 +53,28 @@ namespace Receiptor
         {
             this.receiptType = _rt;
         }
-        public static void validateReceipt(Receipt _rec)
+        public static void validateReceipt(Receipt _rec, PrintPageEventArgs e)
         {
             if (_rec.receiptType == 0) //standard Receipt
             {
-                validatestandard(_rec);
+                validatestandard(_rec, e);
             }
             else if (_rec.receiptType == 1)//birthday
             {
-                validateBd(_rec);
+                validateBd(_rec, e);
             }
             else if (_rec.receiptType == 2) //Memorial
             {
-                validateMemorial(_rec);
+                validateMemorial(_rec, e);
             }
         }
 
-        private static void validateMemorial(Receipt rec)
+        private static void validateMemorial(Receipt rec, PrintPageEventArgs e)
         {
 
         }
 
-        private static void validateBd(Receipt rec)
+        private static void validateBd(Receipt rec, PrintPageEventArgs e)
         {
             if(rec.Contrib.amount == "" || rec.Contrib.amount == "Contribution Amount")
             {
@@ -111,10 +112,10 @@ namespace Receiptor
                 return;
             }
             Messenger.AlertUser("Successful Validation, Sending to Printer", "All Validation has passed.", "Info");
-            Printality.PrintBirthday(rec);
+            Printality.PrintBirthday(rec, e);
         }
 
-        private static void validatestandard(Receipt rec)
+        private static void validatestandard(Receipt rec, PrintPageEventArgs e)
         {
             if (rec.Contrib.amount == "" || rec.Contrib.amount == "Contribution Amount")
             {
@@ -145,7 +146,7 @@ namespace Receiptor
                 return;
             }
             Messenger.AlertUser("Validation Successful", "All validations pass. Sending to Printer", "Info");
-            Printality.PrintStandard(rec);
+            Printality.PrintStandard(rec, e);
         }
 
         private static bool validatePrimary(Address primary)

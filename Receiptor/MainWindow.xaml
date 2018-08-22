@@ -7,42 +7,42 @@
         mc:Ignorable="d"
         Title="Receiptor" Height="350" Width="650">
     <Grid>
-        <ComboBox x:Name="ReceiptType" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="131" SelectionChanged="ReceiptType_SelectionChanged">
+        <ComboBox x:Name="ReceiptType" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="131" SelectionChanged="ReceiptType_SelectionChanged" TabIndex="0">
             <ComboBoxItem Content="Standard Receipt"/>
             <ComboBoxItem Content="Birthday Receipt"/>
             <ComboBoxItem Content="Memorial Receipt"/>
         </ComboBox>
-        <DatePicker x:Name="rcpt_date" HorizontalAlignment="Left" Margin="146,25,0,0" VerticalAlignment="Top" Width="154"/>
-        <CheckBox x:Name="ck_alt" Content="Different Acknowledgement Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="305,30,0,0" Checked="ck_alt_Checked" Unchecked="ck_alt_Unchecked"/>
-        <Button Content="Print" HorizontalAlignment="Left" Margin="545,25,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <DatePicker x:Name="rcpt_date" HorizontalAlignment="Left" Margin="146,25,0,0" VerticalAlignment="Top" Width="154" IsTabStop="True" TabIndex="1"/>
+        <CheckBox x:Name="ck_alt" Content="Different Acknowledgement Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="305,30,0,0" Checked="ck_alt_Checked" Unchecked="ck_alt_Unchecked" TabIndex="2"/>
+        <Button Content="Print" HorizontalAlignment="Left" Margin="545,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="51" TabIndex="21"/>
         <GroupBox Header="Primary Address" HorizontalAlignment="Left" Height="235" Margin="15,74,0,0" VerticalAlignment="Top" Width="199">
             <Grid>
-                <TextBox x:Name="ad1_line1" Height="23" Margin="0,2,0,0" TextWrapping="Wrap" Text="Address 1" VerticalAlignment="Top"/>
-                <TextBox x:Name="ad1_line2" Height="23" Margin="0,27,0,0" TextWrapping="Wrap" Text="Address 2" VerticalAlignment="Top"/>
-                <TextBox x:Name="ad1_city" Height="23" Margin="0,52,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top"/>
-                <TextBox x:Name="ad1_state" Height="23" Margin="0,77,0,0" TextWrapping="Wrap" Text="State/Province" VerticalAlignment="Top"/>
-                <TextBox x:Name="ad1_zip" Height="23" Margin="0,102,0,0" TextWrapping="Wrap" Text="Zip/Postal Code" VerticalAlignment="Top"/>
-                <CheckBox x:Name="ad1_canadian_bool" Content="This is a Canadian address" Margin="0,144,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="ad1_line1" Height="23" Margin="0,2,0,0" TextWrapping="Wrap" Text="Address 1" VerticalAlignment="Top" TabIndex="3" GotFocus="ad1_line1_GotFocus" LostFocus="ad1_line1_LostFocus"/>
+                <TextBox x:Name="ad1_line2" Height="23" Margin="0,27,0,0" TextWrapping="Wrap" Text="Address 2" VerticalAlignment="Top" TabIndex="4" LostFocus="ad1_line2_LostFocus" GotFocus="ad1_line2_GotFocus"/>
+                <TextBox x:Name="ad1_city" Height="23" Margin="0,52,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top" TabIndex="5" LostFocus="ad1_city_LostFocus" GotFocus="ad1_city_GotFocus" />
+                <TextBox x:Name="ad1_state" Height="23" Margin="0,77,0,0" TextWrapping="Wrap" Text="State/Province" VerticalAlignment="Top" TabIndex="6" LostFocus="ad1_state_LostFocus" GotFocus="ad1_state_GotFocus" />
+                <TextBox x:Name="ad1_zip" Height="23" Margin="0,102,0,0" TextWrapping="Wrap" Text="Zip/Postal Code" VerticalAlignment="Top" TabIndex="7" LostFocus="ad1_zip_LostFocus" GotFocus="ad1_zip_GotFocus"/>
+                <CheckBox x:Name="ad1_canadian_bool" Content="This is a Canadian address" Margin="0,144,0,0" VerticalAlignment="Top" TabIndex="8"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Alternate Address" HorizontalAlignment="Left" Height="235" Margin="218,74,0,0" VerticalAlignment="Top" Width="199">
             <Grid>
-                <TextBox x:Name="ad2_line1" Height="23" Margin="0,2,0,0" TextWrapping="Wrap" Text="Address 1" VerticalAlignment="Top" IsEnabled="False"/>
-                <TextBox x:Name="ad2_line2" Height="23" Margin="0,27,0,0" TextWrapping="Wrap" Text="Address 2" VerticalAlignment="Top" IsEnabled="False"/>
-                <TextBox x:Name="ad2_city" Height="23" Margin="0,52,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top" IsEnabled="False"/>
-                <TextBox x:Name="ad2_state" Height="23" Margin="0,77,0,0" TextWrapping="Wrap" Text="State/Province" VerticalAlignment="Top" IsEnabled="False"/>
-                <TextBox x:Name="ad2_zip" Height="23" Margin="0,102,0,0" TextWrapping="Wrap" Text="Zip/Postal Code" VerticalAlignment="Top" IsEnabled="False"/>
-                <CheckBox x:Name="ad2_canadian_bool" Content="This is a Canadian address" Margin="0,144,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+                <TextBox x:Name="ad2_line1" Height="23" Margin="0,2,0,0" TextWrapping="Wrap" Text="Address 1" VerticalAlignment="Top" IsEnabled="False" TabIndex="9" LostFocus="ad2_line1_LostFocus" GotFocus="ad2_line1_GotFocus"/>
+                <TextBox x:Name="ad2_line2" Height="23" Margin="0,27,0,0" TextWrapping="Wrap" Text="Address 2" VerticalAlignment="Top" IsEnabled="False" TabIndex="10" LostFocus="ad2_line2_LostFocus" GotFocus="ad2_line2_GotFocus"/>
+                <TextBox x:Name="ad2_city" Height="23" Margin="0,52,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top" IsEnabled="False" TabIndex="11" LostFocus="ad2_city_LostFocus" GotFocus="ad2_city_GotFocus"/>
+                <TextBox x:Name="ad2_state" Height="23" Margin="0,77,0,0" TextWrapping="Wrap" Text="State/Province" VerticalAlignment="Top" IsEnabled="False" TabIndex="12" LostFocus="ad2_state_LostFocus" GotFocus="ad2_state_GotFocus"/>
+                <TextBox x:Name="ad2_zip" Height="23" Margin="0,102,0,0" TextWrapping="Wrap" Text="Zip/Postal Code" VerticalAlignment="Top" IsEnabled="False" TabIndex="13" LostFocus="ad2_zip_LostFocus" GotFocus="ad2_zip_GotFocus"/>
+                <CheckBox x:Name="ad2_canadian_bool" Content="This is a Canadian address" Margin="0,144,0,0" VerticalAlignment="Top" IsEnabled="False" TabIndex="14"/>
             </Grid>
         </GroupBox>
         <GroupBox x:Name="ad1_adline1" Header="Contribution Info" HorizontalAlignment="Left" Height="235" Margin="421,74,0,0" VerticalAlignment="Top" Width="199">
             <Grid>
-                <TextBox x:Name="ctb_info_amt" Height="23" Margin="0,2,0,0" TextWrapping="Wrap" Text="Contribution Amount" VerticalAlignment="Top"/>
-                <TextBox x:Name="ctb_info_payer" Height="23" Margin="0,27,0,0" TextWrapping="Wrap" Text="Contributer Name" VerticalAlignment="Top"/>
-                <TextBox x:Name="ctb_info_honoree" Height="23" Margin="0,52,0,0" TextWrapping="Wrap" Text="Contribution Honoree" VerticalAlignment="Top" IsEnabled="False"/>
-                <TextBox x:Name="ctb_info_gsn" Height="23" Margin="0,77,0,0" TextWrapping="Wrap" Text="Group Service Number" VerticalAlignment="Top"/>
-                <TextBox x:Name="ctb_info_srcCode" Height="23" Margin="0,102,0,0" TextWrapping="Wrap" Text="Source Code" VerticalAlignment="Top"/>
-                <TextBox x:Name="ctb_info_grpName" Height="23" Margin="0,127,0,0" TextWrapping="Wrap" Text="Group Name" VerticalAlignment="Top"/>
+                <TextBox x:Name="ctb_info_amt" Height="23" Margin="0,2,0,0" TextWrapping="Wrap" Text="Contribution Amount" VerticalAlignment="Top" TabIndex="15" LostFocus="ctb_info_amt_LostFocus" GotFocus="ctb_info_amt_GotFocus" />
+                <TextBox x:Name="ctb_info_payer" Height="23" Margin="0,27,0,0" TextWrapping="Wrap" Text="Contributer Name" VerticalAlignment="Top" TabIndex="16" LostFocus="ctb_info_payer_LostFocus" GotFocus="ctb_info_payer_GotFocus"/>
+                <TextBox x:Name="ctb_info_honoree" Height="23" Margin="0,52,0,0" TextWrapping="Wrap" Text="Contribution Honoree" VerticalAlignment="Top" IsEnabled="False" TabIndex="17" LostFocus="ctb_info_honoree_LostFocus" GotFocus="ctb_info_honoree_GotFocus"/>
+                <TextBox x:Name="ctb_info_gsn" Height="23" Margin="0,77,0,0" TextWrapping="Wrap" Text="Group Service Number" VerticalAlignment="Top" TabIndex="18" LostFocus="ctb_info_gsn_LostFocus" GotFocus="ctb_info_gsn_GotFocus"/>
+                <TextBox x:Name="ctb_info_srcCode" Height="23" Margin="0,102,0,0" TextWrapping="Wrap" Text="Source Code" VerticalAlignment="Top" TabIndex="19" LostFocus="ctb_info_srcCode_LostFocus" GotFocus="ctb_info_srcCode_GotFocus"/>
+                <TextBox x:Name="ctb_info_grpName" Height="23" Margin="0,127,0,0" TextWrapping="Wrap" Text="Group Name" VerticalAlignment="Top" TabIndex="20483647" LostFocus="ctb_info_grpName_LostFocus" GotFocus="ctb_info_grpName_GotFocus"/>
             </Grid>
         </GroupBox>
         <Label Content="Reciept Type" HorizontalAlignment="Left" Margin="10,-1,0,0" VerticalAlignment="Top" Width="131"/>

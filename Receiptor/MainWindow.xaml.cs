@@ -86,5 +86,292 @@ namespace Receiptor
             Address add = new Address(ad1_line1.Text, ad1_line2.Text, ad1_city.Text, ad1_state.Text, ad1_zip.Text, ad1_canadian_bool.IsChecked.Value);
             return add;
         }
+
+        private void ad1_line1_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "Address 1")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ad1_line1_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "")
+            {
+                tx.Text = "Address 1";
+            }
+        }
+
+        private void ad1_line2_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "")
+            {
+                tx.Text = "Address 2";
+            }
+        }
+
+        private void ad1_city_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "")
+            {
+                tx.Text = "City";
+            }
+        }
+
+        private void ad1_state_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "")
+            {
+                tx.Text = "State/Province";
+            }
+        }
+
+        private void ad1_zip_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "")
+            {
+                tx.Text = "Zip/Postal Code";
+            }
+        }
+
+        private void ad2_line1_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "")
+            {
+                tx.Text = "Address 1";
+            }
+        }
+
+        private void ad2_line2_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "")
+            {
+                tx.Text = "Address 2";
+            }
+        }
+
+        private void ad2_city_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "")
+            {
+                tx.Text = "City";
+            }
+        }
+
+        private void ad2_state_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "")
+            {
+                tx.Text = "State/Province";
+            }
+        }
+
+        private void ad2_zip_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "")
+            {
+                tx.Text = "Zip/Postal Code";
+            }
+        }
+
+        private void ctb_info_amt_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "")
+            {
+                tx.Text = "Contribution Amount";
+            }
+        }
+
+        private void ctb_info_payer_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "")
+            {
+                tx.Text = "Contributer Name";
+            }
+        }
+
+        private void ctb_info_honoree_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "")
+            {
+                tx.Text = "Contribution Honoree";
+            }
+        }
+
+        private void ctb_info_gsn_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "")
+            {
+                tx.Text = "Group Service Number";
+            }
+        }
+
+        private void ctb_info_srcCode_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "")
+            {
+                tx.Text = "Source Code";
+            }
+        }
+
+        private void ctb_info_grpName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "")
+            {
+                tx.Text = "Group Name";
+            }
+        }
+
+        private void ad1_line2_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "Address 2")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ad1_city_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "City")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ad1_state_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "State/Province")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ad1_zip_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text ==  "Zip/Postal Code")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ad2_line1_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "Address 1")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ad2_line2_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "Address 2")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ad2_city_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "City")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ad2_state_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "State/Province")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ad2_zip_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "Zip/Postal Code")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ctb_info_amt_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "Contribution Amount")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ctb_info_payer_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "Contributer Name")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ctb_info_honoree_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "Contribution Honoree")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ctb_info_gsn_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if (tx.Text == "Group Service Number") {
+                tx.Text = "";
+            }
+        }
+
+        private void ctb_info_srcCode_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "Source Code")
+            {
+                tx.Text = "";
+            }
+        }
+
+        private void ctb_info_grpName_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tx = sender as TextBox;
+            if(tx.Text == "Group Name")
+            {
+                tx.Text = "";
+            }
+        }
     }
 }
